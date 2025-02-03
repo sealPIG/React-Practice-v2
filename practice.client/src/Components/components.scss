@@ -1,0 +1,93 @@
+@mixin Width700 {
+  @media(max-width: 700px) {
+    @content;
+  }
+}
+
+@mixin Height650 {
+  @media(max-height: 650px) {
+    @content;
+  }
+}
+
+@mixin Height450 {
+  @media(max-height: 450px) {
+    @content;
+  }
+}
+
+
+.outter {
+  width: 90%;
+  height: 70%;
+  border-radius: 20px;
+  padding: 2rem;
+  border: 2px solid White;
+
+  @include Width700() {
+    width: 80%;
+  }
+
+  @include Height650() {
+    height: 50%;
+  }
+
+  @include Height450() {
+    height: 30%;
+  }
+
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: {
+      right: 20px;
+      left: 20px
+    }
+  }
+
+  &-children {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.home {
+  width: '90vw';
+  height: '70vh';
+  border-radius: '20px';
+  padding: '2rem';
+  border: '2px solid White';
+  justify-content: 'center';
+  align-items: 'center';
+
+  &-selector {
+    width: 100%;
+    height: 70%;
+
+    display: flex;
+    justify-content: 'center';
+    align-items: 'center';
+  }
+}
+
+.selector {
+  width: 100%;
+  height: 60%;
+
+  border-radius: 20px;
+  padding: 2rem;
+  background-color: White;
+  color: black;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #282c34;
+  color: white;
+}
