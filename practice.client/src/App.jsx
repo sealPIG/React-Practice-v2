@@ -14,7 +14,7 @@ export default function Application() {
   const navigate = useNavigate();
 
   const handleButtonClick = (pageName) => {
-    navigate(pageName)
+    navigate(pageName);
   }
 
   return (
